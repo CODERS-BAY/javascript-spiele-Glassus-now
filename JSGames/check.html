@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Numbers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/check.css" />
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pitcher-game.html">Pitcher Game</a></li>
+            <li><a href="RPS.html">Rock-Paper-Scissors</a></li>
+            <li><a href="check.html">Guess a Number</a></li>
+            <li><a href="cB.html">Code Breaker</a></li>
+        </ul>
+    </header>
+
+    <div id="flex">    
+            <div id="cube1" class="wrapper">
+                <div class="cube_area">
+                    <div class="cube cube-front">
+                        <p>?</p>
+                    </div>
+                    <div class="cube cube-right">
+                        <p>?</p>
+                    </div>
+                    <div class="cube cube-back">
+                        <p>?</p>
+                    </div>
+                    <div class="cube cube-left">
+                        <p>?</p>
+                    </div>
+                    <div class="cube cube-top">
+                        <p>?</p>
+                    </div>
+                    <div class="cube cube-bottom">
+                        <p>?</p>
+                    </div>
+                </div>
+            </div>
+            <div id="screen1" class="screen active">
+                <h2>Check Numbers</h2>
+                <p>Enter the upper limit</p>
+                <input type="number" id="upperLimit" placeholder="Upperlimit" onchange="setUpperLimit()">
+                <p>How often do you want to guess?</p>
+                <input type="number" id="count" name="count" placeholder="Number of tries" onchange="setCount()">
+                <button onclick="changeScreen()" class="button">Submit</button>
+            </div>
+        
+
+        <div id="screen2" class="screen">
+            <p>Enter your Guess below:</p>
+            <input type="number" id="inputNumber" placeholder="Errate die Zahl!">
+            <button onclick="start()" class="button">Enter</button>
+            <p id="outputText">Good Luck!</p>
+        </div>
+        <div id="cube2" class="wrapper">
+            <div class="cube_area">
+                <div class="cube cube-front">
+                    <p>?</p>
+                </div>
+                <div class="cube cube-right">
+                    <p>?</p>
+                </div>
+                <div class="cube cube-back">
+                    <p>?</p>
+                </div>
+                <div class="cube cube-left">
+                    <p>?</p>
+                </div>
+                <div class="cube cube-top">
+                    <p>?</p>
+                </div>
+                <div class="cube cube-bottom">
+                    <p>?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery.min.3.6.0.js"></script>
+    <script type="text/Javascript" src="js/check.js"></script>
+    <script type="text/Javascript" src="js/RPSlib.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Breaker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cB.css">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pitcher-game.html">Pitcher Game</a></li>
+            <li><a href="RPS.html">Rock-Paper-Scissor</a></li>
+            <li><a href="check.html">Guess a Number</a></li>
+            <li><a href="cB.html">Code Breaker</a></li>
+        </ul>
+    </header>
+
+    <div id="flex">
+        <div id="field">
+            <div class="button" id="new_game" onclick="newGame()">New Game</div>
+            <div id="gamePannel">
+                <div class="numbers">
+                    <input type="number" id="first" value=1 min="1" max="9">
+                    <input type="number" id="second" value=1 min="1" max="9">
+                    <input type="number" id="third" value=1 min="1" max="9">
+                </div>
+                <div class="buttonBox">
+                    <div class="button" id="submit" onclick="submit()">Submit</div>
+                </div>
+            </div>
+
+        </div>
+        <div id="outPut">
+        </div>
+    </div>
+    <div id="rules_box">
+        <div class="rules">
+            <p>The rules are simple:</p>
+            <p class="red">Red: your number is completely wrong!</p>
+            <p class="yellow">Yellow: your number is correct but on the wrong place!</p>
+            <p class="green">Green: Your number is completely correct!</p>
+            <p>You have 12 turns...Good Luck!</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.3.6.0.js"></script>
+    <script src="js/cB.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --neon: hsl(500 100% 54%);
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+h1 {
+    color:var(--neon);
+    text-shadow: 0 0 0.1em currentColor;
+}
+
+body {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    min-height: 100vh;
+    place-items: center;
+    font-family: 'Heebo', sans-serif;
+}
+
+.gameButton {
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--neon);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--neon);
+    background-color:transparent;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    transition: all 300ms;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.1em currentColor;
+    box-shadow: inset 0 0 1em 0 var(--neon), 0 0 1em 0 var(--neon);
+    transition: background-color 100ms linear;
+}
+
+.gameButton::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background-color: var(--neon);
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.12);
+    filter: blur(3em);
+    opacity: 0.7;
+}
+
+.gameButton:hover::before, .gameButton:focus::before {
+    opacity: 1;
+}
+
+.gameButton:hover, .gameButton:focus {
+    background-color: var(--neon);
+    color: black;
+    text-shadow: none;
+}
+
+.gameButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--neon);
+    background-color: var(--neon);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.gameButton:hover::after {
+    opacity: 1;
+}
+
+.flex {
+    display:flex;
+}
+
+#game4 {
+    transform: translateY(20px);
+}
+
+
