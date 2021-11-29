@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    /* background-color: black; */
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    background-color: black;
+    
+    font-family: 'Heebo', sans-serif;
+}
+
+:root {
+    --p-neon: hsl(500 100% 54%);
+    --r-neon: hsl(700 100% 54%);
+    --g-neon: hsl(500 100% 54%);
+    --y-neon: hsl(790 100% 54%);
+}
+
+.button {
+    background-color: black;
+    margin-top: 20px;
+    padding: 10px;
+    transition: all 300ms;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--p-neon);
+    display: inline-flex;
+    border: 5px solid var(--p-neon);
+    transition: all 300ms;
+    border-radius: 0.25em;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: var(--p-neon);
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--p-neon);
+    background-color: var(--p-neon);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.buttonBox {
+    margin-bottom: 15px;
+}
+
+#gamePannel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+    border-color: var(--p-neon);
+    border: 5px solid var(--p-neon);
+    border-radius: 0.25em;
+    box-shadow: inset 0 0 1em 0 var(--p-neon), 0 0 1em 0 var(--p-neon);
+    width: auto;
+    margin: 10px;
+}
+
+::placeholder {
+    color: var(--p-neon);
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 0 10px;
+}
+
+#new_game {
+    margin-bottom: 20px;
+}
+
+input {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--p-neon);
+    font-size: 3rem;
+    height: auto;
+    width: 20%;
+}
+
+#field {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#outPut {
+    text-align: center;
+    padding: 10px;
+    color: var(--p-neon);
+    border-color: var(--p-neon);
+    border: 5px solid var(--p-neon);
+    border-radius: 0.25em;
+    box-shadow: inset 0 0 1em 0 var(--p-neon), 0 0 1em 0 var(--p-neon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20vh;
+    width: 50%;
+    margin-right: 50px;
+    font-size: 2rem;
+    transform: translateY(45px);
+}
+
+#rules_box{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules {
+    transform: translateX(-50px);
+    margin: 20px;
+    border-color: var(--p-neon);
+    border: 5px solid var(--p-neon);
+    border-radius: 0.25em;
+    box-shadow: inset 0 0 1em 0 var(--p-neon), 0 0 1em 0 var(--p-neon);
+    color: var(--p-neon)
+}
+
+p {
+    padding: 0 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    display: flex;   
+    list-style: none;
+}
+
+a {
+    margin: 5px;
+    border-radius: 0.25em;
+    border: 3px solid var(--p-neon);
+    padding: 10px;
+    color: var(--p-neon);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--p-neon);
+    color: black;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.yellow {
+    color:var(--y-neon);
+}
+
+.green {
+    color: var(--g-neon);
+}
+
+.red {
+    color: var(--r-neon);
+}
